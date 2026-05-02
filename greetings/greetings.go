@@ -15,9 +15,10 @@ func Hello(name string)(string, error) {
 	if name == "" {
 		return name, errors.New("empty name")
 	}
-
+	
 	//Create a message using a random format.
-	message := fmt.Sprintf(randomFormat(), name)
+	//message := fmt.Sprintf(randomFormat(), name)
+	message := fmt.Sprint(randomFormat())
 	return message, nil
 }
 
